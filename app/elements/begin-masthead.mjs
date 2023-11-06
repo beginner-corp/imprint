@@ -34,6 +34,7 @@ export default function BeginMasthead ({ html, state }) {
       @media screen and (min-width: 56em) {
         :host { --global-bar-height: 5em; }
         .lg-hidden { display: none; }
+        .lg-inline { display: inline; }
         .lg-block  { display: block; }
         .lg-flex   { display: flex; }
         .lg-pi-double { padding-inline: 2em; }
@@ -84,6 +85,11 @@ export default function BeginMasthead ({ html, state }) {
 
       #product-bar > nav {
         inline-size: min(100vw, var(--max-inline-size));
+        gap: 3em;
+      }
+
+      #product-bar [slot="product-nav-lg"] {
+        gap: 0.5em;
       }
 
       #nav-footer {
@@ -193,7 +199,7 @@ export default function BeginMasthead ({ html, state }) {
           <span class="clip collapsed">collapsed</span>
         </label>
 
-        <nav id="mobile-menu" class="lg-hidden fixed overflow-y-scroll inset-i-0">
+        <nav id="mobile-menu" aria-label="${product} navigation" class="lg-hidden fixed overflow-y-scroll inset-i-0">
           <section>
             <h1 class="clip">${product}</h1>
             <slot name="product-nav"></slot>
@@ -277,18 +283,18 @@ export default function BeginMasthead ({ html, state }) {
             </masthead-slice>
           </section>
 
-          <section id="nav-footer" class="flex align-items-center justify-content-between pi">
+          <div id="nav-footer" class="flex align-items-center justify-content-between pi">
             <a href="/">
               🐲 Sign up
             </a>
             <deploy-button></deploy-button>
-          </section>
+          </div>
         </nav>
 
         <!-- -------------- -->
         <!-- Widescreen nav -->
         <!-- -------------- -->
-        <nav class="sm-hidden lg-flex align-items-center flex-grow">
+        <nav aria-label="Begin platform navigation" class="sm-hidden lg-flex align-items-center flex-grow">
           <div id="widescreen-nav" class="flex justify-content-center flex-grow">
             <masthead-section-dropdown label="Products">
               <div>
@@ -347,18 +353,34 @@ export default function BeginMasthead ({ html, state }) {
             </masthead-section-dropdown>
           </div>
 
-          <div class="flex gap0">
+          <div class="flex">
             <deploy-button></deploy-button>
           </div>
         </nav>
       </div>
     </header>
 
-    <div id="product-bar" class="relative flex align-items-center">
-      <nav class="mi-auto pi lg-pi-double">
-        <h2 class="semibold">${product}</h2>
-        <slot name="product-bar"></slot>
-      </nav>
-    </div>
+    ${ product
+    ? `
+        <div id="product-bar" class="flex align-items-center relative">
+          <!-- Mobile product bar -->
+          <nav aria-label="${product} navigation" class="flex lg-hidden align-items-center pi">
+            <h2>
+              <span class="semibold">${product}:</span>
+              <slot name="product-page"></slot>
+
+            </h2>
+          </nav>
+          <!-- Widescreen product bar -->
+          <nav aria-label="${product} navigation" class="sm-hidden lg-flex align-items-center justify-content-center mi-auto lg-pi-double">
+            <h2>
+              Products / <span class="semibold">${product}</span>
+            </h2>
+            <slot name="product-nav-lg"></slot>
+          </nav>
+        </div>
+      `
+    : ''
+}
   `
 }

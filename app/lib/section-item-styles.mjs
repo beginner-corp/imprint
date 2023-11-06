@@ -4,9 +4,10 @@ const initial =
 `border: 1px solid transparent;
 border-radius: 9999px;
 cursor: pointer;
-padding-block: 0.333em;
-padding-inline: 1em;
-transition: ${transition} border-color, ${transition} color;`
+transition: ${transition} border-color, ${transition} color;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+`
 
 const hover =
 `border-color: var(--accent);

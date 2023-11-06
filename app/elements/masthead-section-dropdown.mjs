@@ -10,8 +10,8 @@ export default function MastheadSectionDropdown ({ html, state }) {
     <style>
       summary {
         ${initial}
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        padding-block: 0.333em;
+        padding-inline: 1em;
         gap: 0.5em;
       }
 
@@ -69,7 +69,7 @@ export default function MastheadSectionDropdown ({ html, state }) {
         inline-size: min(100vw, var(--max-inline-size));
         background: white;
         border-block-start: 1px solid var(--accent);
-        box-shadow: 0 4px 4px hsla(0deg 0% 0% / 0.25);
+        box-shadow: 0 6px 6px hsla(0deg 0% 0% / 0.125);
         padding-block: 1.5em 2em;
         gap: 1em;
       }

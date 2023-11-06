@@ -1,6 +1,6 @@
 import { initial, hover, active } from '../lib/section-item-styles.mjs'
 
-export default function MastheadSectionLink ({ html, state }) {
+export default function ProductSectionLink ({ html, state }) {
   const { attrs } = state
   const { href } = attrs
 
@@ -10,8 +10,8 @@ export default function MastheadSectionLink ({ html, state }) {
     <style>
       a {
         ${initial}
-        padding-block: 0.333em;
-        padding-inline: 1em;
+        padding-block: 0.25em;
+        padding-inline: 0.75em;
       }
 
       a:not(.active):hover {
@@ -22,7 +22,7 @@ export default function MastheadSectionLink ({ html, state }) {
         ${active}
       }
     </style>
-    <a href="${href}" class="inline-block semibold ${isActive ? 'active' : ''}">
+    <a href="${href}" class="inline-block ${isActive ? 'active' : ''}">
       <slot></slot>
     </a>
   `

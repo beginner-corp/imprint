@@ -1,8 +1,8 @@
 export default function BeginLogoFull ({ html }) {
   return html`
     <svg
-      width="86"
-      height="44"
+      width="100"
+      height="51"
       viewBox="0 0 86 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
