@@ -20,13 +20,16 @@ export default function MastheadSectionDropdown ({ html, state }) {
         ${hover}
       }
 
+      /* Expanded hit area for open dropdowns on hover */
       details[open] summary:before {
         content: '';
         position: absolute;
         inset-inline: 0;
         inset-block: -100%;
+        transform: perspective(80px) rotateX(45deg) scaleX(1.125);
       }
 
+      /* Notch design for opens dropdowns */
       details[open] summary:after {
         content: '';
         inline-size: 0.75em;
