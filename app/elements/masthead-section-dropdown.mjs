@@ -99,9 +99,23 @@ export default function MastheadSectionDropdown ({ html, state }) {
 
     <script>
       const details = document.querySelectorAll('masthead-section-dropdown details')
+
+      const preventDefault = e => e.preventDefault()
+
       details.forEach(detail => {
-        detail.addEventListener('mouseover', () => detail.setAttribute('open', 'open'))
-        detail.addEventListener('mouseout', () => detail.removeAttribute('open'))
+        detail.addEventListener('pointerenter', function(e) {
+          if (e.pointerType === 'mouse') {
+            detail.setAttribute('open', 'open')
+            detail.querySelector('summary').addEventListener('click', preventDefault)
+          }
+        })
+
+        detail.addEventListener('pointerleave', function(e) {
+          if (e.pointerType === 'mouse') {
+            detail.removeAttribute('open')
+            detail.querySelector('summary').removeEventListener('click', preventDefault)
+          }
+        })
       })
     </script>
   `
