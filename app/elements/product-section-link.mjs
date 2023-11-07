@@ -1,4 +1,4 @@
-import { initial, hover, active } from '../lib/section-item-styles.mjs'
+import { initial, hover } from '../lib/section-item-styles.mjs'
 
 export default function ProductSectionLink ({ html, state }) {
   const { attrs } = state
@@ -11,15 +11,15 @@ export default function ProductSectionLink ({ html, state }) {
       a {
         ${initial}
         padding-block: 0.25em;
-        padding-inline: 0.75em;
+        padding-inline: 1em;
       }
 
-      a:not(.active):hover {
+      a:hover {
         ${hover}
       }
 
       a.active {
-        ${active}
+        background: hsla(0deg 0% 0% / 0.2);
       }
     </style>
     <a href="${href}" class="inline-block ${isActive ? 'active' : ''}">

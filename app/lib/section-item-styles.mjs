@@ -17,8 +17,12 @@ const active =
 `background-color: var(--accent);
 color: white;`
 
+const activeHover = 
+`color: currentColor;`
+
 export {
   initial,
   hover,
   active,
+  activeHover,
 }

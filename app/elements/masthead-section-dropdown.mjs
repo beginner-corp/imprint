@@ -16,7 +16,7 @@ export default function MastheadSectionDropdown ({ html, state }) {
       }
 
       summary:not(.active):hover,
-      details[open] summary {
+      details[open] summary:not(.active) {
         ${hover}
       }
 

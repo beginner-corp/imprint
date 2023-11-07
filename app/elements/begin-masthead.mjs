@@ -68,7 +68,6 @@ export default function BeginMasthead ({ html, state }) {
       #global-bar {
         block-size: var(--global-bar-height);
         max-inline-size: var(--max-inline-size);
-        gap: 1em;
       }
 
       #widescreen-nav {
@@ -85,11 +84,15 @@ export default function BeginMasthead ({ html, state }) {
 
       #product-bar > nav {
         inline-size: min(100vw, var(--max-inline-size));
-        gap: 3em;
+        gap: 1em;
+      }
+
+      .product-name {
+        margin-inline-start: 0.25em;
       }
 
       #product-bar [slot="product-nav-lg"] {
-        gap: 0.5em;
+        gap: 0.125em;
       }
 
       #nav-footer {
@@ -168,15 +171,12 @@ export default function BeginMasthead ({ html, state }) {
 
     <header class="relative">
       <div id="global-bar" class="flex align-items-center pi lg-pi-double mi-auto">
-        <div class="flex">
+        <div id="begin-logo">
           <a href="https://begin.com">
             <figure>
-              <begin-logo-full></begin-logo-full>
+              <begin-logo></begin-logo>
               <figcaption class="clip">Begin</figcaption>
             </figure>
-          </a>
-          <a href="${productUrl}" class="lg-hidden">
-            <slot name="product-brand"></slot>
           </a>
         </div>
 
@@ -287,7 +287,7 @@ export default function BeginMasthead ({ html, state }) {
             <a href="/">
               🐲 Sign up
             </a>
-            <deploy-button></deploy-button>
+            <masthead-deploy-button></masthead-deploy-button>
           </div>
         </nav>
 
@@ -354,7 +354,7 @@ export default function BeginMasthead ({ html, state }) {
           </div>
 
           <div class="flex">
-            <deploy-button></deploy-button>
+            <masthead-deploy-button></masthead-deploy-button>
           </div>
         </nav>
       </div>
@@ -365,16 +365,17 @@ export default function BeginMasthead ({ html, state }) {
         <div id="product-bar" class="flex align-items-center relative">
           <!-- Mobile product bar -->
           <nav aria-label="${product} navigation" class="flex lg-hidden align-items-center pi">
-            <h2>
+            <h2 class="product-name">
               <span class="semibold">${product}:</span>
               <slot name="product-page"></slot>
 
             </h2>
           </nav>
+
           <!-- Widescreen product bar -->
-          <nav aria-label="${product} navigation" class="sm-hidden lg-flex align-items-center justify-content-center mi-auto lg-pi-double">
-            <h2>
-              Products / <span class="semibold">${product}</span>
+          <nav aria-label="${product} navigation" class="sm-hidden lg-flex align-items-center mi-auto lg-pi-double">
+            <h2 class="product-name">
+              <span class="semibold">${product}</span>
             </h2>
             <slot name="product-nav-lg"></slot>
           </nav>
