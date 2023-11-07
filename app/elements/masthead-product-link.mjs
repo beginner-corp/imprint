@@ -1,6 +1,6 @@
 import { initial, hover } from '../lib/section-item-styles.mjs'
 
-export default function ProductSectionLink ({ html, state }) {
+export default function ProductLink ({ html, state }) {
   const { attrs } = state
   const { href } = attrs
 

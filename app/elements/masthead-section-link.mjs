@@ -1,6 +1,6 @@
 import { initial, hover, active } from '../lib/section-item-styles.mjs'
 
-export default function MastheadSectionLink ({ html, state }) {
+export default function SectionLink ({ html, state }) {
   const { attrs } = state
   const { href } = attrs
 

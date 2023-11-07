@@ -1,4 +1,4 @@
-export default function MastheadSlice ({ html, state }) {
+export default function Slice ({ html, state }) {
   const { attrs } = state
   const hideBorder = Object.keys(attrs).includes('hide-border')
 

@@ -1,6 +1,6 @@
 export default function BeginMasthead ({ html, state }) {
   const { attrs } = state
-  const { product, 'product-url': productUrl } = attrs
+  const { product } = attrs
 
   return html`
     <style>
@@ -174,7 +174,7 @@ export default function BeginMasthead ({ html, state }) {
         <div id="begin-logo">
           <a href="https://begin.com">
             <figure>
-              <begin-logo></begin-logo>
+              <masthead-begin-logo></masthead-begin-logo>
               <figcaption class="clip">Begin</figcaption>
             </figure>
           </a>

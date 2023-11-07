@@ -1,4 +1,4 @@
-export default function MastheadSymbols ({ html }) {
+export default function Symbols ({ html }) {
   return html`
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="display:none;">
       <symbol id="svg-caret" width="12" height="9" viewBox="0 0 12 9" fill="none">

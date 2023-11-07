@@ -1,6 +1,6 @@
 import { initial, hover, active } from '../lib/section-item-styles.mjs'
 
-export default function MastheadSectionDropdown ({ html, state }) {
+export default function SectionDropdown ({ html, state }) {
   const { attrs } = state
   const { label } = attrs
 
