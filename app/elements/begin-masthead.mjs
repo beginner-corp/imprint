@@ -1,6 +1,6 @@
 export default function BeginMasthead ({ html, state }) {
   const { attrs } = state
-  const { product } = attrs
+  const { breakpoint = '56em', product } = attrs
 
   return html`
     <style scope='global'>
@@ -36,7 +36,7 @@ export default function BeginMasthead ({ html, state }) {
 
       .sm-hidden { display: none; }
 
-      @media screen and (min-width: 56em) {
+      @media screen and (min-width: ${breakpoint}) {
         :host { --global-bar-height: 5em; }
         .lg-hidden { display: none; }
         .lg-inline { display: inline; }
@@ -126,7 +126,7 @@ export default function BeginMasthead ({ html, state }) {
 };
       }
 
-      @media screen and (width < 56em) {
+      @media screen and (width < ${breakpoint}) {
         #mobile-menu-toggle:checked ~ #mobile-menu {
           display: flex;
           flex-direction: column;
