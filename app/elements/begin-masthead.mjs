@@ -24,6 +24,7 @@ export default function BeginMasthead ({ html, state }) {
         display: block;
         position: fixed;
         inset-block-start: 0;
+        inset-inline: 0;
         z-index: 10;
         color: var(--color);
         line-height: 1.5;
