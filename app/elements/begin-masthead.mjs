@@ -7,6 +7,7 @@ export default function BeginMasthead ({ html, state }) {
       :root {
         --global-bar-height: 4em;
         --product-bar-height: 3em;
+        --masthead-max-height: calc(var(--global-bar-height) + var(--product-bar-height));
       }
 
       @media screen and (min-width: ${breakpoint}) {
@@ -367,7 +368,7 @@ export default function BeginMasthead ({ html, state }) {
       </div>
     </header>
 
-    ${ product
+    ${product
     ? `
         <div id="product-bar" class="flex align-items-center relative">
           <!-- Mobile product bar -->
@@ -389,6 +390,5 @@ export default function BeginMasthead ({ html, state }) {
         </div>
       `
     : ''
-}
-  `
+}`
 }
