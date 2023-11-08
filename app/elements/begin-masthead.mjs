@@ -22,7 +22,7 @@ export default function BeginMasthead ({ html, state }) {
         --_max-inline-size: var(--max-inline-size, 1240px);
         --_inline-padding: var(--inline-padding, 1em);
         display: block;
-        position: sticky;
+        position: fixed;
         inset-block-start: 0;
         z-index: 10;
         color: var(--color);
