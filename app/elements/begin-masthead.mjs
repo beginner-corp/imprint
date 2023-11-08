@@ -17,7 +17,6 @@ export default function BeginMasthead ({ html, state }) {
         inset-block-start: 0;
         z-index: 10;
         color: var(--color);
-        font-size: 100%;
         line-height: 1.5;
       }
 
