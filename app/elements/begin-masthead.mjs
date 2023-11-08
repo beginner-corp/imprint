@@ -8,6 +8,10 @@ export default function BeginMasthead ({ html, state }) {
         --global-bar-height: 4em;
         --product-bar-height: 3em;
       }
+
+      @media screen and (min-width: ${breakpoint}) {
+        :root { --global-bar-height: 5em; }
+      }
     </style>
     <style>
       :host {
@@ -37,7 +41,6 @@ export default function BeginMasthead ({ html, state }) {
       .sm-hidden { display: none; }
 
       @media screen and (min-width: ${breakpoint}) {
-        :host { --global-bar-height: 5em; }
         .lg-hidden { display: none; }
         .lg-inline { display: inline; }
         .lg-block  { display: block; }
