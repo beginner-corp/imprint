@@ -3,10 +3,14 @@ export default function BeginMasthead ({ html, state }) {
   const { product } = attrs
 
   return html`
-    <style>
-      :host {
+    <style scope='global'>
+      :root {
         --global-bar-height: 4em;
         --product-bar-height: 3em;
+      }
+    </style>
+    <style>
+      :host {
         --color: #003451;
         --_muted: var(--muted, #5f5f5f);
         --_accent: var(--accent, #9556e1);
