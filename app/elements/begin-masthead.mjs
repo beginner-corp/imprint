@@ -120,7 +120,10 @@ export default function BeginMasthead ({ html, state }) {
       #mobile-menu {
         display: none;
         background: white;
-        block-size: calc(100dvh - var(--global-bar-height));
+        block-size: ${Object.keys(attrs).includes('product')
+    ? 'calc(100dvh - var(--global-bar-height) - var(--product-bar-height))'
+    : 'calc(100dvh - var(--global-bar-height))'
+};
         inset-block-start: ${Object.keys(attrs).includes('product')
     ? 'calc(var(--global-bar-height) + var(--product-bar-height))'
     : 'var(--global-bar-height)'
@@ -129,7 +132,8 @@ export default function BeginMasthead ({ html, state }) {
 
       @media screen and (width < 56em) {
         #mobile-menu-toggle:checked ~ #mobile-menu {
-          display: block;
+          display: flex;
+          flex-direction: column;
         }
       }
 
@@ -290,10 +294,7 @@ export default function BeginMasthead ({ html, state }) {
             </masthead-slice>
           </section>
 
-          <div id="nav-footer" class="flex align-items-center justify-content-between pi">
-            <a href="/">
-              🐲 Sign up
-            </a>
+          <div id="nav-footer" class="flex align-items-center justify-content-between pi mbs-auto">
             <masthead-deploy-button></masthead-deploy-button>
           </div>
         </nav>
