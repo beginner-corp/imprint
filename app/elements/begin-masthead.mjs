@@ -109,10 +109,6 @@ export default function BeginMasthead ({ html, state }) {
         list-style: none;
       }
 
-      li li {
-        padding-inline-start: 1em;
-      }
-
       /* ==========================
        * MOBILE MENU
        * ======================= */
