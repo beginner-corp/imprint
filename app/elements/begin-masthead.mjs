@@ -13,6 +13,7 @@ export default function BeginMasthead ({ html, state }) {
         --max-inline-size: 1240px;
         display: block;
         position: sticky;
+        z-index: 10;
         inset-block-start: 0;
         color: var(--color);
         font-size: 100%;
@@ -117,7 +118,10 @@ export default function BeginMasthead ({ html, state }) {
         display: none;
         background: white;
         block-size: calc(100dvh - var(--global-bar-height));
-        inset-block-start: calc(var(--global-bar-height) + var(--product-bar-height));
+        inset-block-start: ${Object.keys(attrs).includes('product')
+    ? 'calc(var(--global-bar-height) + var(--product-bar-height))'
+    : 'var(--global-bar-height)'
+};
       }
 
       @media screen and (width < 56em) {
