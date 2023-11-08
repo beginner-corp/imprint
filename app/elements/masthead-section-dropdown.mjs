@@ -35,8 +35,8 @@ export default function SectionDropdown ({ html, state }) {
         inline-size: 0.75em;
         aspect-ratio: 1 / 1;
         background: white;
-        border-inline-start: 1px solid var(--accent);
-        border-block-start: 1px solid var(--accent);
+        border-inline-start: 1px solid var(--_accent);
+        border-block-start: 1px solid var(--_accent);
         position: absolute;
         rotate: 45deg;
         transform: skew(-10deg, -10deg);
@@ -68,7 +68,7 @@ export default function SectionDropdown ({ html, state }) {
         inset-block-start: var(--global-bar-height);
         inline-size: min(100vw, var(--max-inline-size));
         background: white;
-        border-block-start: 1px solid var(--accent);
+        border-block-start: 1px solid var(--_accent);
         box-shadow: 0 6px 6px hsla(0deg 0% 0% / 0.125);
         padding-block: 1.5em 2em;
         gap: 1em;
@@ -77,7 +77,7 @@ export default function SectionDropdown ({ html, state }) {
       .dropdown a {
         display: inline-block;
         padding-block: 0.25em;
-        color: var(--accent);
+        color: var(--_accent);
       }
 
       .dropdown a:hover {
