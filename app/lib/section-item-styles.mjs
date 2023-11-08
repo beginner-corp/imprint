@@ -11,11 +11,11 @@ transition: ${transition} border-color, ${transition} color;
 `
 
 const hover =
-`border-color: var(--accent);
-color: var(--accent);`
+`border-color: var(--_accent);
+color: var(--_accent);`
 
 const active =
-`background-color: var(--accent);
+`background-color: var(--_accent);
 color: white;`
 
 const activeHover = 

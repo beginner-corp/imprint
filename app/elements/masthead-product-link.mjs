@@ -1,4 +1,4 @@
-import { initial, hover } from '../lib/section-item-styles.mjs'
+import { initial } from '../lib/section-item-styles.mjs'
 
 export default function ProductLink ({ html, state }) {
   const { attrs } = state
@@ -10,12 +10,14 @@ export default function ProductLink ({ html, state }) {
     <style>
       a {
         ${initial}
+        color: white;
         padding-block: 0.25em;
         padding-inline: 1em;
       }
 
       a:hover {
-        ${hover}
+        border-color: white;
+        color: white;
       }
 
       a.active {

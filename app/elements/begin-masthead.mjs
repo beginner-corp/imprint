@@ -8,13 +8,14 @@ export default function BeginMasthead ({ html, state }) {
         --global-bar-height: 4em;
         --product-bar-height: 3em;
         --color: #003451;
-        --muted: #5f5f5f;
-        --accent: #9556e1;
-        --max-inline-size: 1240px;
+        --_muted: var(--muted, #5f5f5f);
+        --_accent: var(--accent, #9556e1);
+        --_max-inline-size: var(--max-inline-size, 1240px);
+        --_inline-padding: var(--inline-padding, 1em);
         display: block;
         position: sticky;
-        z-index: 10;
         inset-block-start: 0;
+        z-index: 10;
         color: var(--color);
         font-size: 100%;
         line-height: 1.5;
@@ -26,9 +27,9 @@ export default function BeginMasthead ({ html, state }) {
 
       .mbe { margin-block-end: 1em; }
       .mbe-half { margin-block-end: 0.5em; }
-      .pi { padding-inline: 1em; }
+      .pi { padding-inline: var(--_inline-padding); }
 
-      .muted { color: var(--muted); }
+      .muted { color: var(--_muted); }
 
       .sm-hidden { display: none; }
 
@@ -38,10 +39,9 @@ export default function BeginMasthead ({ html, state }) {
         .lg-inline { display: inline; }
         .lg-block  { display: block; }
         .lg-flex   { display: flex; }
-        .lg-pi-double { padding-inline: 2em; }
       }
 
-      .accent { color: var(--accent); }
+      .accent { color: var(--_accent); }
       .semibold { font-weight: 600; }
       .small { font-size: 0.875em; }
 
@@ -62,13 +62,13 @@ export default function BeginMasthead ({ html, state }) {
 
       header {
         background: white;
-        border-bottom: 1px solid var(--accent);
+        border-bottom: 1px solid var(--_accent);
         z-index: 1;
       }
 
       #global-bar {
         block-size: var(--global-bar-height);
-        max-inline-size: var(--max-inline-size);
+        max-inline-size: var(--_max-inline-size);
       }
 
       #widescreen-nav {
@@ -76,7 +76,7 @@ export default function BeginMasthead ({ html, state }) {
       }
 
       #product-bar {
-        background-color: var(--accent);
+        background-color: var(--_accent);
         block-size: var(--product-bar-height);
         color: white;
         -webkit-font-smoothing: antialiased;
@@ -84,7 +84,7 @@ export default function BeginMasthead ({ html, state }) {
       }
 
       #product-bar > nav {
-        inline-size: min(100vw, var(--max-inline-size));
+        inline-size: min(100vw, var(--_max-inline-size));
         gap: 1em;
       }
 
@@ -161,11 +161,11 @@ export default function BeginMasthead ({ html, state }) {
       }
 
       #resources-mobile h3 {
-        color: var(--muted);
+        color: var(--_muted);
       }
 
       #resources-mobile a {
-        color: var(--accent);
+        color: var(--_accent);
         display: inline-block;
         padding-block: 0.125em;
       }
@@ -174,7 +174,7 @@ export default function BeginMasthead ({ html, state }) {
     <masthead-symbols></masthead-symbols>
 
     <header class="relative">
-      <div id="global-bar" class="flex align-items-center pi lg-pi-double mi-auto">
+      <div id="global-bar" class="flex align-items-center pi mi-auto">
         <div id="begin-logo">
           <a href="https://begin.com">
             <figure>
@@ -377,7 +377,7 @@ export default function BeginMasthead ({ html, state }) {
           </nav>
 
           <!-- Widescreen product bar -->
-          <nav aria-label="${product} navigation" class="sm-hidden lg-flex align-items-center mi-auto lg-pi-double">
+          <nav aria-label="${product} navigation" class="sm-hidden lg-flex align-items-center pi mi-auto">
             <h2 class="product-name">
               <span class="semibold">${product}</span>
             </h2>
