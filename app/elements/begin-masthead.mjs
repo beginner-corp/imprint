@@ -245,12 +245,12 @@ export default function BeginMasthead ({ html, state }) {
 
           <section>
             <masthead-slice>
-              <a href="showcase">
+              <a href="https://enhance.dev/showcase">
                 <h2 class="semibold">Showcase</h2>
               </a>
             </masthead-slice>
             <masthead-slice>
-              <a href="blog">
+              <a href="https://begin.com/blog">
                 <h2 class="semibold">Blog</h2>
               </a>
             </masthead-slice>
@@ -261,34 +261,35 @@ export default function BeginMasthead ({ html, state }) {
                 <article>
                   <h3 class="semibold mbe-half">Developer Docs</h3>
                   <ul>
-                    <li><a href="/">Begin CLI</a></li>
-                    <li><a href="/">Enhance</a></li>
-                    <li><a href="/">Architect</a></li>
+                    <li><a href="https://begin.com/docs">Begin CLI</a></li>
+                    <li><a href="https://enhance.dev/docs">Enhance</a></li>
+                    <li><a href="https://arc.codes">Architect</a></li>
                   </ul>
                 </article>
 
                 <article>
-                  <h3 class="semibold mbe-half">Learning</h3>
+                  <h3 class="semibold mbe-half">Support</h3>
                   <ul>
-                    <li><a href="/">Blog</a></li>
-                    <li><a href="/">Youtube</a></li>
+                    <li><a href="https://begin-help.zendesk.com/hc/en-us/requests/new">Submit a Ticket</a></li>
+                    <li><a href="https://enhance.dev/discord">Enhance Chat</a></li>
+                    <li><a href="https://discord.gg/y5A2eTsCRX">Architect Chat</a></li>
                   </ul>
                 </article>
 
                 <article>
-                  <h3 class="semibold mbe-half">Issues & Help</h3>
+                  <h3 class="semibold mbe-half">GitHub</h3>
                   <ul>
-                    <li><a href="/">Support</a></li>
-                    <li><a href="/">Github</a></li>
+                    <li><a href="https://github.com/beginner-corp">Begin</a></li>
+                    <li><a href="https://github.com/enhance-dev">Enhance</a></li>
+                    <li><a href="https://github.com/architect">Architect</a></li>
                   </ul>
                 </article>
 
                 <article>
-                  <h3 class="semibold mbe-half">Community</h3>
+                  <h3 class="semibold mbe-half">Mastodon</h3>
                   <ul>
-                    <li><a href="/">Mastodon</a></li>
-                    <li><a href="/">Twitter</a></li>
-                    <li><a href="/">Discord</a></li>
+                    <li><a href="https://fosstodon.org/@enhance_dev">Enhance</a></li>
+                    <li><a href="https://fosstodon.org/@arcserverless">Architect</a></li>
                   </ul>
                 </article>
               </div>
@@ -320,9 +321,9 @@ export default function BeginMasthead ({ html, state }) {
               </div>
             </masthead-section-dropdown>
 
-            <masthead-section-link href="showcase">Showcase</masthead-section-link>
+            <masthead-section-link href="https://enhance.dev/showcase">Showcase</masthead-section-link>
 
-            <masthead-section-link href="blog">Blog</masthead-section-link>
+            <masthead-section-link href="https://begin.com/blog">Blog</masthead-section-link>
 
             <masthead-section-dropdown label="Resources">
               <article>
@@ -337,18 +338,18 @@ export default function BeginMasthead ({ html, state }) {
               <article>
                 <h2 class="small muted semibold mbe">Support</h2>
                 <ul>
-                  <li><a href="/">Submit a Ticket</a></li>
-                  <li><a href="/">Enhance Chat</a></li>
-                  <li><a href="/">Architect Chat</a></li>
+                  <li><a href="https://begin-help.zendesk.com/hc/en-us/requests/new">Submit a Ticket</a></li>
+                  <li><a href="https://enhance.dev/discord">Enhance Chat</a></li>
+                  <li><a href="https://discord.gg/y5A2eTsCRX">Architect Chat</a></li>
                 </ul>
               </article>
 
               <article>
                 <h2 class="small muted semibold mbe">GitHub</h2>
                 <ul>
-                  <li><a href="/">Begin</a></li>
-                  <li><a href="/">Enhance</a></li>
-                  <li><a href="/">Architect</a></li>
+                  <li><a href="https://github.com/beginner-corp">Begin</a></li>
+                  <li><a href="https://github.com/enhance-dev">Enhance</a></li>
+                  <li><a href="https://github.com/architect">Architect</a></li>
                 </ul>
               </article>
 
@@ -356,7 +357,7 @@ export default function BeginMasthead ({ html, state }) {
                 <h2 class="small muted semibold mbe">Mastodon</h2>
                 <ul>
                   <li><a href="https://fosstodon.org/@enhance_dev">Enhance</a></li>
-                  <li><a href="https://fosstodon.org/@enhance_dev">Architect</a></li>
+                  <li><a href="https://fosstodon.org/@arcserverless">Architect</a></li>
                 </ul>
               </article>
             </masthead-section-dropdown>
