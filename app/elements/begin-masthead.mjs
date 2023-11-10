@@ -309,7 +309,7 @@ export default function BeginMasthead ({ html, state }) {
         <!-- -------------- -->
         <nav aria-label="Begin platform navigation" class="sm-hidden lg-flex align-items-center flex-grow">
           <div id="widescreen-nav" class="flex justify-content-center flex-grow">
-            <masthead-section-dropdown label="Products" ${Object.keys(attrs).includes("product") ? "active" : ""}>
+            <masthead-section-dropdown label="Products" ${active === "products" ? "active" : ""}>
               <div>
                 <h3 class="semibold"><a href="https://begin.com">Begin CLI</a></h3>
                 <p class="small">Cloud distribution</p>
