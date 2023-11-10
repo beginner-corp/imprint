@@ -87,8 +87,6 @@ export default function BeginMasthead ({ html, state }) {
         background-color: var(--_accent);
         block-size: var(--product-bar-height);
         color: white;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
       }
 
       #product-bar > nav {
