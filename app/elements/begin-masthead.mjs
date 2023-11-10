@@ -1,6 +1,6 @@
 export default function BeginMasthead ({ html, state }) {
   const { attrs } = state
-  const { breakpoint = '56em', product } = attrs
+  const { breakpoint = '56em', product, active = '' } = attrs
 
   return html`
     <style scope='global'>
@@ -211,11 +211,14 @@ export default function BeginMasthead ({ html, state }) {
           <span class="clip collapsed">collapsed</span>
         </label>
 
-        <nav id="mobile-menu" aria-label="${product} navigation" class="lg-hidden fixed overflow-y-scroll inset-i-0">
+        <nav id="mobile-menu" class="lg-hidden fixed overflow-y-scroll inset-i-0">
+          ${product
+    ? `
           <section>
             <h1 class="clip">${product}</h1>
             <slot name="product-nav"></slot>
           </section>
+            ` : ''}
 
           <section>
             <masthead-slice>
@@ -321,9 +324,9 @@ export default function BeginMasthead ({ html, state }) {
               </div>
             </masthead-section-dropdown>
 
-            <masthead-section-link href="https://enhance.dev/showcase">Showcase</masthead-section-link>
+            <masthead-section-link href="https://enhance.dev/showcase" ${active === "showcase" ? "active" : ""}>Showcase</masthead-section-link>
 
-            <masthead-section-link href="https://begin.com/blog">Blog</masthead-section-link>
+            <masthead-section-link href="https://begin.com/blog" ${active === "blog" ? "active" : ""}>Blog</masthead-section-link>
 
             <masthead-section-dropdown label="Resources">
               <article>
