@@ -297,7 +297,7 @@ export default function BeginMasthead ({ html, state }) {
             </masthead-slice>
           </section>
 
-          <div id="nav-footer" class="flex align-items-center justify-content-between pi mbs-auto">
+          <div id="nav-footer" class="flex align-items-center justify-content-center pi mbs-auto">
             <masthead-deploy-button></masthead-deploy-button>
           </div>
         </nav>
@@ -364,9 +364,7 @@ export default function BeginMasthead ({ html, state }) {
             </masthead-section-dropdown>
           </div>
 
-          <div class="flex">
-            <masthead-deploy-button></masthead-deploy-button>
-          </div>
+          <masthead-deploy-button></masthead-deploy-button>
         </nav>
       </div>
     </header>
