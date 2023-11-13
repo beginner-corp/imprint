@@ -375,7 +375,7 @@ export default function BeginMasthead ({ html, state }) {
     ? `
         <div id="product-bar" class="flex align-items-center relative">
           <!-- Mobile product bar -->
-          <nav aria-label="${product} navigation" class="flex lg-hidden align-items-center pi">
+          <nav aria-label="${product} navigation" class="flex lg-hidden align-items-center pi mi-auto">
             <h2 class="product-name">
               <span class="semibold">${product}:</span>
               <slot name="product-page"></slot>
