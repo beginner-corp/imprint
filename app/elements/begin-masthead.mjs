@@ -182,7 +182,7 @@ export default function BeginMasthead ({ html, state }) {
     <header class="relative">
       <div id="global-bar" class="flex align-items-center pi mi-auto">
         <div id="begin-logo">
-          <a href="https://begin.com">
+          <a href="https://begin.com" class="inline-block">
             <figure>
               <masthead-begin-logo></masthead-begin-logo>
               <figcaption class="clip">Begin</figcaption>
