@@ -1,10 +1,6 @@
 export default function DeployButton ({ html }) {
   return html`
     <style>
-      :host {
-        font-weight: 700;
-      }
-
       @keyframes deploy-hover {
         0% {
           scale: 1 1;
@@ -20,6 +16,16 @@ export default function DeployButton ({ html }) {
         }
       }
 
+      :host {
+        font-weight: 700;
+      }
+
+      /* Animate button on hover host instead of hovering the button. */
+      /* This prevents glitchiness when hovering the edges of the button while it's scaling */
+      :host:hover a {
+        animation: 0.4s ease deploy-hover;
+      }
+
       a {
         background-color: var(--deploy-button-background, #f7eeff);
         filter: drop-shadow(var(--deploy-button-shadow, #f088fe) 0.25em 0.25em);
@@ -29,9 +35,6 @@ export default function DeployButton ({ html }) {
         padding-inline: 1em;
       }
 
-      a:hover {
-        animation: 0.4s ease deploy-hover;
-      }
     </style>
     <a href="https://begin.com" class="inline-block">
       Deploy!
