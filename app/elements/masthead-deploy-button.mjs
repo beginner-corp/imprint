@@ -33,6 +33,11 @@ export default function DeployButton ({ html }) {
         border-radius: 0.333em;
         padding-block: 0.333em;
         padding-inline: 1em;
+        transition: filter 0.125s ease;
+      }
+
+      a:active {
+        filter: drop-shadow(var(--deploy-button-shadow, #f088fe) 0em 0em);
       }
 
     </style>
