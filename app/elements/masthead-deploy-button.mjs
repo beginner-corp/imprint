@@ -41,7 +41,7 @@ export default function DeployButton ({ html }) {
       }
 
     </style>
-    <a href="https://begin.com" class="inline-block">
+    <a href="https://begin.com/docs/getting-started/installing-the-begin-cli?from=enhance" class="inline-block">
       Deploy!
     </a>
   `
