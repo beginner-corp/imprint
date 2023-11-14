@@ -92,7 +92,7 @@ export default function SectionDropdown ({ html, state }) {
           <use xlink:href="#svg-caret"></use>
         </svg>
       </summary>
-      <div class="dropdown absolute inset-i-0 mi-auto pi lg-pi-double flex justify-content-between">
+      <div class="dropdown absolute inset-i-0 mi-auto pi lg-pi-double flex justify-content-around">
         <slot></slot>
       </div>
     </details>
