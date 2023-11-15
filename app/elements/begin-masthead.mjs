@@ -293,6 +293,13 @@ export default function BeginMasthead ({ html, state }) {
                     <li><a href="https://fosstodon.org/@arcserverless">Architect</a></li>
                   </ul>
                 </article>
+
+                <article>
+                  <h2 class="semibold mbe-half">Legacy</h2>
+                  <ul>
+                    <li><a href="https://ci.begin.com">ci.begin.com</a></li>
+                  </ul>
+                </article>
               </div>
             </masthead-slice>
           </section>
@@ -359,6 +366,13 @@ export default function BeginMasthead ({ html, state }) {
                 <ul>
                   <li><a href="https://fosstodon.org/@enhance_dev">Enhance</a></li>
                   <li><a href="https://fosstodon.org/@arcserverless">Architect</a></li>
+                </ul>
+              </article>
+
+              <article>
+                <h2 class="small muted semibold mbe">Legacy</h2>
+                <ul>
+                  <li><a href="https://ci.begin.com">ci.begin.com</a></li>
                 </ul>
               </article>
             </masthead-section-dropdown>
