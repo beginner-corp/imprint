@@ -96,7 +96,7 @@ export default function BeginMasthead ({ html, state }) {
       }
 
       #widescreen-nav {
-        gap: 0.125em;
+        gap: 0.75em;
       }
 
       #product-bar {

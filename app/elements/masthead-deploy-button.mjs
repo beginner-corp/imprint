@@ -3,8 +3,8 @@ export default function DeployButton ({ html, state}) {
   const { from = '' } = attrs
 
   const deployUrl = from
-    ? `https://begin.com/docs/getting-starts/installing-the-begin-cli?from=${from}`
-    : 'https://begin.com/docs/getting-starts/installing-the-begin-cli?from=masthead'
+    ? `https://begin.com/docs/getting-started/installing-the-begin-cli?from=${from}`
+    : 'https://begin.com/docs/getting-started/installing-the-begin-cli?from=masthead'
 
   return html`
     <style>
