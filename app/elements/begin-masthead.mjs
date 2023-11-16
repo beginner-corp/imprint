@@ -11,6 +11,15 @@ const links = {
   }
 }
 
+const svgIcon = `
+<svg class="inline-block external-link-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M14.9458 1.41548C14.8386 1.16587 14.5942 1.00297 14.3226 1H9.80645C9.43232 1 9.12903 1.30329 9.12903 1.67742C9.12903 2.05155 9.43232 2.35484 9.80645 2.35484H12.6877L7.52129 7.52129C7.25714 7.78577 7.25714 8.21423 7.52129 8.47871C7.78577 8.74286 8.21423 8.74286 8.47871 8.47871L13.6452 3.31226V6.19355C13.6452 6.56768 13.9485 6.87097 14.3226 6.87097C14.6967 6.87097 15 6.56768 15 6.19355V1.67742C14.9995 1.58737 14.9811 1.49833 14.9458 1.41548Z" />
+  <path d="M14.3226 10.0323C13.9505 10.0371 13.65 10.3376 13.6452 10.7097C13.6402 12.3288 12.3288 13.6402 10.7097 13.6452H5.29032C3.67116 13.6402 2.3598 12.3288 2.35484 10.7097V5.29032C2.3598 3.67116 3.67116 2.3598 5.29032 2.35484C5.66445 2.35484 5.96774 2.05155 5.96774 1.67742C5.96774 1.30329 5.66445 1 5.29032 1C2.92084 1 1 2.92084 1 5.29032V10.7097C1 13.0792 2.92084 15 5.29032 15H10.7097C13.0792 15 15 13.0792 15 10.7097C14.9951 10.3376 14.6947 10.0371 14.3226 10.0323Z" />
+  <path d="M14.9458 1.41548C14.8386 1.16587 14.5942 1.00297 14.3226 1H9.80645C9.43232 1 9.12903 1.30329 9.12903 1.67742C9.12903 2.05155 9.43232 2.35484 9.80645 2.35484H12.6877L7.52129 7.52129C7.25714 7.78577 7.25714 8.21423 7.52129 8.47871C7.78577 8.74286 8.21423 8.74286 8.47871 8.47871L13.6452 3.31226V6.19355C13.6452 6.56768 13.9485 6.87097 14.3226 6.87097C14.6967 6.87097 15 6.56768 15 6.19355V1.67742C14.9995 1.58737 14.9811 1.49833 14.9458 1.41548Z" stroke="black" stroke-width="0.5"/>
+  <path d="M14.3226 10.0323C13.9505 10.0371 13.65 10.3376 13.6452 10.7097C13.6402 12.3288 12.3288 13.6402 10.7097 13.6452H5.29032C3.67116 13.6402 2.3598 12.3288 2.35484 10.7097V5.29032C2.3598 3.67116 3.67116 2.3598 5.29032 2.35484C5.66445 2.35484 5.96774 2.05155 5.96774 1.67742C5.96774 1.30329 5.66445 1 5.29032 1C2.92084 1 1 2.92084 1 5.29032V10.7097C1 13.0792 2.92084 15 5.29032 15H10.7097C13.0792 15 15 13.0792 15 10.7097C14.9951 10.3376 14.6947 10.0371 14.3226 10.0323Z" stroke="black" stroke-width="0.5"/>
+</svg>
+`
+
 export default function BeginMasthead ({ html, state }) {
   const { attrs } = state
   const { breakpoint = '56em', product, active = '' } = attrs
@@ -126,6 +135,17 @@ export default function BeginMasthead ({ html, state }) {
 
       li {
         list-style: none;
+      }
+
+      .external-link-icon {
+        vertical-align: middle;
+        inline-size: 0.625em;
+        aspect-ratio: 1 / 1;
+      }
+
+      .external-link-icon path {
+        fill: #777;
+        stroke: #777;
       }
 
       /* ==========================
@@ -252,7 +272,9 @@ export default function BeginMasthead ({ html, state }) {
                 </li>
                 <li class="mbe">
                   <a href="${links[environment].ARCHITECT_URL}">
-                    <span class="semibold accent">Architect</span><br />
+                    <span class="semibold accent">
+                      Architect ${svgIcon}
+                    </span><br />
                     <span class='small'>Declarative deployment</span>
                   </a>
                 </li>
@@ -340,7 +362,11 @@ export default function BeginMasthead ({ html, state }) {
                 <p class="small">Resilient fullstack web apps</p>
               </div>
               <div>
-                <h3 class="semibold"><a href="${links[environment].ARCHITECT_URL}">Architect</a></h3>
+                <h3 class="semibold">
+                  <a href="${links[environment].ARCHITECT_URL}">
+                    Architect ${svgIcon}
+                  </a>
+                </h3>
                 <p class="small">Declarative deployment</p>
               </div>
             </masthead-section-dropdown>
