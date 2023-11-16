@@ -2,6 +2,8 @@ export default function BeginMasthead ({ html, state }) {
   const { attrs } = state
   const { breakpoint = '56em', product, active = '' } = attrs
 
+  const from = product ? product.toLowerCase().replaceAll(' ', '-') : ''
+
   return html`
     <style scope='global'>
       :root {
@@ -305,7 +307,7 @@ export default function BeginMasthead ({ html, state }) {
           </section>
 
           <div id="nav-footer" class="flex align-items-center justify-content-center pi mbs-auto">
-            <masthead-deploy-button></masthead-deploy-button>
+            <masthead-deploy-button from="${from}"></masthead-deploy-button>
           </div>
         </nav>
 
@@ -378,7 +380,7 @@ export default function BeginMasthead ({ html, state }) {
             </masthead-section-dropdown>
           </div>
 
-          <masthead-deploy-button></masthead-deploy-button>
+          <masthead-deploy-button from="${from}"></masthead-deploy-button>
         </nav>
       </div>
     </header>

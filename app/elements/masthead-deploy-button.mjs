@@ -1,4 +1,11 @@
-export default function DeployButton ({ html }) {
+export default function DeployButton ({ html, state}) {
+  const { attrs = {} } = state
+  const { from = '' } = attrs
+
+  const deployUrl = from
+    ? `https://begin.com/docs/getting-starts/installing-the-begin-cli?from=${from}`
+    : 'https://begin.com/docs/getting-starts/installing-the-begin-cli?from=masthead'
+
   return html`
     <style>
       @keyframes deploy-hover {
@@ -41,7 +48,7 @@ export default function DeployButton ({ html }) {
       }
 
     </style>
-    <a href="https://begin.com/docs/getting-started/installing-the-begin-cli?from=enhance" class="inline-block">
+    <a href="${deployUrl}" class="inline-block">
       Deploy!
     </a>
   `
