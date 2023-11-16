@@ -1,8 +1,22 @@
+const links = {
+  staging: {
+    ARCHITECT_URL: 'https://staging.arc.codes',
+    BEGIN_URL: 'https://staging.begin.com',
+    ENHANCE_URL: 'https://staging.enhance.dev',
+  },
+  production: {
+    ARCHITECT_URL: 'https://arc.codes',
+    BEGIN_URL: 'https://begin.com',
+    ENHANCE_URL: 'https://enhance.dev',
+  }
+}
+
 export default function BeginMasthead ({ html, state }) {
   const { attrs } = state
   const { breakpoint = '56em', product, active = '' } = attrs
 
   const from = product ? product.toLowerCase().replaceAll(' ', '-') : ''
+  const environment = process.env.ARC_ENV === 'production' ? 'production' : 'staging'
 
   return html`
     <style scope='global'>
@@ -184,7 +198,7 @@ export default function BeginMasthead ({ html, state }) {
     <header class="relative">
       <div id="global-bar" class="flex align-items-center pi mi-auto">
         <div id="begin-logo">
-          <a href="https://begin.com" class="inline-block">
+          <a href="${links[environment].BEGIN_URL}" class="inline-block">
             <figure>
               <masthead-begin-logo></masthead-begin-logo>
               <figcaption class="clip">Begin</figcaption>
@@ -225,19 +239,19 @@ export default function BeginMasthead ({ html, state }) {
               <h2 class="semibold mbe">Products</h2>
               <ul>
                 <li class="mbe">
-                  <a href="https://begin.com">
+                  <a href="${links[environment].BEGIN_URL}">
                     <span class="semibold accent">Begin CLI</span><br />
                     <span class='small'>Cloud distribution</span>
                   </a>
                 </li>
                 <li class="mbe">
-                  <a href="https://enhance.dev">
+                  <a href="${links[environment].ENHANCE_URL}">
                     <span class="semibold accent">Enhance</span><br />
                     <span class='small'>Resilient fullstack web apps</span>
                   </a>
                 </li>
                 <li class="mbe">
-                  <a href="https://arc.codes">
+                  <a href="${links[environment].ARCHITECT_URL}">
                     <span class="semibold accent">Architect</span><br />
                     <span class='small'>Declarative deployment</span>
                   </a>
@@ -248,12 +262,12 @@ export default function BeginMasthead ({ html, state }) {
 
           <section>
             <masthead-slice>
-              <a href="https://enhance.dev/showcase">
+              <a href="${links[environment].ENHANCE_URL}/showcase">
                 <h2 class="semibold">Showcase</h2>
               </a>
             </masthead-slice>
             <masthead-slice>
-              <a href="https://begin.com/blog">
+              <a href="${links[environment].BEGIN_URL}/blog">
                 <h2 class="semibold">Blog</h2>
               </a>
             </masthead-slice>
@@ -264,9 +278,9 @@ export default function BeginMasthead ({ html, state }) {
                 <article>
                   <h3 class="semibold mbe-half">Developer Docs</h3>
                   <ul>
-                    <li><a href="https://begin.com/docs">Begin CLI</a></li>
-                    <li><a href="https://enhance.dev/docs">Enhance</a></li>
-                    <li><a href="https://arc.codes">Architect</a></li>
+                    <li><a href="${links[environment].BEGIN_URL}/docs">Begin CLI</a></li>
+                    <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
+                    <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
                   </ul>
                 </article>
 
@@ -274,7 +288,7 @@ export default function BeginMasthead ({ html, state }) {
                   <h3 class="semibold mbe-half">Support</h3>
                   <ul>
                     <li><a href="https://begin-help.zendesk.com/hc/en-us/requests/new">Submit a Ticket</a></li>
-                    <li><a href="https://enhance.dev/discord">Enhance Chat</a></li>
+                    <li><a href="${links[environment].ENHANCE_URL}/discord">Enhance Chat</a></li>
                     <li><a href="https://discord.gg/y5A2eTsCRX">Architect Chat</a></li>
                   </ul>
                 </article>
@@ -318,30 +332,30 @@ export default function BeginMasthead ({ html, state }) {
           <div id="widescreen-nav" class="flex justify-content-center flex-grow">
             <masthead-section-dropdown label="Products" ${active === "products" ? "active" : ""}>
               <div>
-                <h3 class="semibold"><a href="https://begin.com">Begin CLI</a></h3>
+                <h3 class="semibold"><a href="${links[environment].BEGIN_URL}">Begin CLI</a></h3>
                 <p class="small">Cloud distribution</p>
               </div>
               <div>
-                <h3 class="semibold"><a href="https://enhance.dev">Enhance</a></h3>
+                <h3 class="semibold"><a href="${links[environment].ENHANCE_URL}">Enhance</a></h3>
                 <p class="small">Resilient fullstack web apps</p>
               </div>
               <div>
-                <h3 class="semibold"><a href="https://arc.codes">Architect</a></h3>
+                <h3 class="semibold"><a href="${links[environment].ARCHITECT_URL}">Architect</a></h3>
                 <p class="small">Declarative deployment</p>
               </div>
             </masthead-section-dropdown>
 
-            <masthead-section-link href="https://enhance.dev/showcase" ${active === "showcase" ? "active" : ""}>Showcase</masthead-section-link>
+            <masthead-section-link href="${links[environment].ENHANCE_URL}/showcase" ${active === "showcase" ? "active" : ""}>Showcase</masthead-section-link>
 
-            <masthead-section-link href="https://begin.com/blog" ${active === "blog" ? "active" : ""}>Blog</masthead-section-link>
+            <masthead-section-link href="${links[environment].BEGIN_URL}/blog" ${active === "blog" ? "active" : ""}>Blog</masthead-section-link>
 
             <masthead-section-dropdown label="Resources">
               <article>
                 <h2 class="small muted semibold mbe">Developer Docs</h2>
                 <ul>
-                  <li><a href="https://begin.com/docs">Begin CLI</a></li>
-                  <li><a href="https://enhance.dev/docs">Enhance</a></li>
-                  <li><a href="https://arc.codes">Architect</a></li>
+                  <li><a href="${links[environment].BEGIN_URL}/docs">Begin CLI</a></li>
+                  <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
+                  <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
                 </ul>
               </article>
 
@@ -349,7 +363,7 @@ export default function BeginMasthead ({ html, state }) {
                 <h2 class="small muted semibold mbe">Support</h2>
                 <ul>
                   <li><a href="https://begin-help.zendesk.com/hc/en-us/requests/new">Submit a Ticket</a></li>
-                  <li><a href="https://enhance.dev/discord">Enhance Chat</a></li>
+                  <li><a href="${links[environment].ENHANCE_URL}/discord">Enhance Chat</a></li>
                   <li><a href="https://discord.gg/y5A2eTsCRX">Architect Chat</a></li>
                 </ul>
               </article>
