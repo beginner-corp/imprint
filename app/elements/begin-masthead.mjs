@@ -108,6 +108,10 @@ export default function BeginMasthead ({ html, state }) {
         gap: 0.75em;
       }
 
+      #begin-logo {
+        inset-block-start: 0.125em;
+      }
+
       #product-bar {
         background-color: var(--_accent);
         block-size: var(--product-bar-height);
@@ -156,11 +160,11 @@ export default function BeginMasthead ({ html, state }) {
         display: none;
         background: hsla(0deg 0% 100% / 0.95);
         backdrop-filter: blur(3px);
-        block-size: ${Object.keys(attrs).includes('product')
+        block-size: ${object.keys(attrs).includes('product')
     ? 'calc(100dvh - var(--global-bar-height) - var(--product-bar-height))'
     : 'calc(100dvh - var(--global-bar-height))'
 };
-        inset-block-start: ${Object.keys(attrs).includes('product')
+        inset-block-start: ${object.keys(attrs).includes('product')
     ? 'calc(var(--global-bar-height) + var(--product-bar-height))'
     : 'var(--global-bar-height)'
 };
@@ -218,7 +222,7 @@ export default function BeginMasthead ({ html, state }) {
 
     <header class="relative">
       <div id="global-bar" class="flex align-items-center pi mi-auto">
-        <div id="begin-logo">
+        <div id="begin-logo" class="relative">
           <a href="${links[environment].BEGIN_URL}" class="inline-block">
             <figure>
               <masthead-begin-logo></masthead-begin-logo>
