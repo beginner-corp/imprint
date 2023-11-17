@@ -154,7 +154,8 @@ export default function BeginMasthead ({ html, state }) {
 
       #mobile-menu {
         display: none;
-        background: white;
+        background: hsla(0deg 0% 100% / 0.95);
+        backdrop-filter: blur(3px);
         block-size: ${Object.keys(attrs).includes('product')
     ? 'calc(100dvh - var(--global-bar-height) - var(--product-bar-height))'
     : 'calc(100dvh - var(--global-bar-height))'
