@@ -1,11 +1,13 @@
 const links = {
   staging: {
     ARCHITECT_URL: 'https://staging.arc.codes',
+    AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://staging.begin.com',
     ENHANCE_URL: 'https://staging.enhance.dev',
   },
   production: {
     ARCHITECT_URL: 'https://arc.codes',
+    AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://begin.com',
     ENHANCE_URL: 'https://enhance.dev',
   }
@@ -283,6 +285,14 @@ export default function BeginMasthead ({ html, state }) {
                     <span class='small'>Declarative deployment</span>
                   </a>
                 </li>
+                <li class="mbe">
+                  <a href="${links[environment].AWS_LITE_URL}">
+                    <span class="semibold accent">
+                      aws-lite
+                    </span><br />
+                    <span class='small'>Community driven AWS client</span>
+                  </a>
+                </li>
               </ul>
             </masthead-slice>
           </section>
@@ -308,6 +318,7 @@ export default function BeginMasthead ({ html, state }) {
                     <li><a href="${links[environment].BEGIN_URL}/docs">Begin CLI</a></li>
                     <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
                     <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
+                    <li><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></li>
                   </ul>
                 </article>
 
@@ -374,6 +385,10 @@ export default function BeginMasthead ({ html, state }) {
                 </h3>
                 <p class="small">Declarative deployment</p>
               </div>
+              <div>
+                <h3 class="semibold"><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></h3>
+                <p class="small">Community driven AWS client</p>
+              </div>
             </masthead-section-dropdown>
 
             <masthead-section-link href="${links[environment].ENHANCE_URL}/showcase" ${active === "showcase" ? "active" : ""}>Showcase</masthead-section-link>
@@ -387,6 +402,7 @@ export default function BeginMasthead ({ html, state }) {
                   <li><a href="${links[environment].BEGIN_URL}/docs">Begin CLI</a></li>
                   <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
                   <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
+                  <li><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></li>
                 </ul>
               </article>
 
