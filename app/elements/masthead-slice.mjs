@@ -6,7 +6,7 @@ export default function Slice ({ html, state }) {
     <style>
       :host > div {
         display: block;
-        padding: 1em;
+        padding-block: 1em;
         border-block-end: 1px solid;
       }
 
@@ -18,7 +18,7 @@ export default function Slice ({ html, state }) {
         border-color: transparent;
       }
     </style>
-    <div class="${hideBorder ? 'transparent-border' : 'color-border'}">
+    <div class="${hideBorder ? 'transparent-border' : 'color-border'} pi">
       <slot></slot>
     </div>
   `
