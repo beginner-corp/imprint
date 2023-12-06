@@ -111,7 +111,7 @@ export default function BeginMasthead ({ html, state }) {
       }
 
       #begin-logo {
-        translate: 0 0.125em;
+        translate: -0.25em 0.125em;
       }
 
       #product-bar {
@@ -123,10 +123,6 @@ export default function BeginMasthead ({ html, state }) {
       #product-bar > nav {
         inline-size: min(100vw, var(--_max-inline-size));
         gap: 1em;
-      }
-
-      .product-name {
-        margin-inline-start: 0.25em;
       }
 
       #product-bar [slot="product-nav-lg"] {
@@ -451,7 +447,7 @@ export default function BeginMasthead ({ html, state }) {
         <div id="product-bar" class="flex align-items-center relative">
           <!-- Mobile product bar -->
           <nav aria-label="${product} navigation" class="flex lg-hidden align-items-center pi mi-auto">
-            <h2 class="product-name">
+            <h2>
               <span class="semibold">${product}:</span>
               <slot name="product-page"></slot>
 
@@ -460,7 +456,7 @@ export default function BeginMasthead ({ html, state }) {
 
           <!-- Widescreen product bar -->
           <nav aria-label="${product} navigation" class="sm-hidden lg-flex align-items-center pi mi-auto">
-            <h2 class="product-name">
+            <h2>
               <span class="semibold">${product}</span>
             </h2>
             <slot name="product-nav-lg"></slot>
