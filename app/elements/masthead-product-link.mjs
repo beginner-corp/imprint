@@ -20,6 +20,12 @@ export default function ProductLink ({ html, state }) {
         color: white;
       }
 
+      a:focus-visible {
+        box-shadow: none;
+        outline: 2px auto Highlight;
+        outline: 2px auto -webkit-focus-ring-color;
+      }
+
       a.active {
         background: hsla(0deg 0% 0% / 0.2);
       }
