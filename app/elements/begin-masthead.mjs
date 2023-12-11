@@ -37,7 +37,7 @@ export default function BeginMasthead ({ html, state }) {
         --masthead-max-height: calc(var(--global-bar-height) + var(--product-bar-height));
       }
 
-      @media screen and (min-width: ${breakpoint}) {
+      @media (min-width: ${breakpoint}) {
         :root { --global-bar-height: 5em; }
       }
     </style>
@@ -69,7 +69,7 @@ export default function BeginMasthead ({ html, state }) {
 
       .sm-hidden { display: none; }
 
-      @media screen and (min-width: ${breakpoint}) {
+      @media (min-width: ${breakpoint}) {
         .lg-hidden { display: none; }
         .lg-inline { display: inline; }
         .lg-block  { display: block; }
@@ -168,7 +168,7 @@ export default function BeginMasthead ({ html, state }) {
 };
       }
 
-      @media screen and (width < ${breakpoint}) {
+      @media (width < ${breakpoint}) {
         #mobile-menu-toggle:checked ~ #mobile-menu {
           display: flex;
           flex-direction: column;

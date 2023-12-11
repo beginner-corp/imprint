@@ -1,10 +1,16 @@
 <style scope="global">
   body {
     font-family: Montserrat, system-ui;
+    margin-block-start: var(--global-bar-height);
   }
 
-  begin-masthead {
+  begin-masthead,
+  begin-footer {
     --accent: #9556e1;
+  }
+
+  main {
+    min-block-size: 80vh;
   }
 </style>
 <begin-masthead product="Enhance" active="products">
@@ -21,3 +27,7 @@
   </div>
 
 </begin-masthead>
+
+<main>Content!</main>
+
+<begin-footer></begin-footer>
