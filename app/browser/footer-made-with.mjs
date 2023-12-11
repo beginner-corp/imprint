@@ -1,5 +1,5 @@
 /* globals document HTMLElement window customElements */
-class MadeWith extends HTMLElement {
+export default class MadeWith extends HTMLElement {
   constructor() {
     super()
     this.template = document.createElement('template')
