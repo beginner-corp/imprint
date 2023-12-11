@@ -7,7 +7,7 @@ Nameplate and navigation for the Begin ecosystem.
 Install via the GitHub repo, preferably with a version tag:
 
 ```shell
-npm i git@github.com:beginner-corp/masthead.git#v<N.N.N>
+npm i git@github.com:beginner-corp/imprint.git#v<N.N.N>
 ```
 
 Reexport the component(s) from within your Enhance app:
