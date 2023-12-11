@@ -1,4 +1,4 @@
-# Masthead
+# Imprint
 
 Nameplate and navigation for the Begin ecosystem.
 
