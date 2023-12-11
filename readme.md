@@ -4,17 +4,18 @@ Nameplate and navigation for the Begin ecosystem.
 
 ## Usage
 
-Install via the GitHub repo:
+Install via the GitHub repo, preferably with a version tag:
 
 ```shell
-npm install https://github.com/beginner-corp/masthead.git
+npm i git@github.com:beginner-corp/masthead.git#v<N.N.N>
 ```
 
 Reexport the component(s) from within your Enhance app:
 
 ```js
 // app/elements/begin-masthead.mjs
-export { default as BeginMasthead } from '@begin/masthead'
+import { Masthead } from '@begin/imprint'
+export default Masthead
 ```
 
 ## Slots
