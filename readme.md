@@ -46,5 +46,10 @@ export default Masthead
 | MadeWithElement | footer-made-with |
 | MadeWithBrowser | footer-made-with |
 
-**`MadeWithBrowser`** is a browser element and must be placed in your app's browser directory, i.e. `app/browser/footer-made-with.mjs`.
+**`MadeWithBrowser`** is a browser element and must be placed in your app's browser directory, i.e. `app/browser/footer-made-with.mjs`:
+
+```js
+import { MadeWithBrowser } from '@begin/imprint'
+customElements.define('footer-made-with', MadeWithBrowser)
+```
 
