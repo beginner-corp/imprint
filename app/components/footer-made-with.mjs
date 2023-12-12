@@ -1,13 +1,9 @@
-/* globals document HTMLElement window customElements */
-export default class MadeWith extends HTMLElement {
+/* globals window customElements */
+import CustomElement from '@enhance/custom-element'
+
+export default class MadeWith extends CustomElement {
   constructor() {
     super()
-    this.template = document.createElement('template')
-    this.template.innerHTML = `
-      Made with <span class="js-made-with-emoji">&#128150;</span>
-      <span class="inline-block">in <span class='js-made-with-place'>California</span></span>
-    `
-    this.replaceChildren(this.template.content.cloneNode(true))
     this.getRandomItem = this.getRandomItem.bind(this)
     this.placeContainer = this.querySelector('.js-made-with-place')
     this.emojiContainer = this.querySelector('.js-made-with-emoji')
@@ -64,6 +60,13 @@ export default class MadeWith extends HTMLElement {
         ],
       },
     ]
+  }
+
+  render({ html }) {
+    return html`
+      Made with <span class="js-made-with-emoji">&#128150;</span>
+      <span class="inline-block">in <span class='js-made-with-place'>California</span></span>
+    `
   }
 
   getRandomItem(array = []) {
