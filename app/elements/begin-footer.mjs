@@ -48,6 +48,14 @@ export default function BeginFooter ({ html, state }) {
         margin-block-end: 2em;
       }
 
+      masthead-begin-logo {
+        margin-block-end: 0.5em;
+      }
+
+      h2 {
+        margin-block-end: 0.25em;
+      }
+
       a {
         color: var(--_accent);
         font-size: 0.875em;
@@ -65,7 +73,7 @@ export default function BeginFooter ({ html, state }) {
       small {
         font-size: 0.87em;
         line-height: 1.5;
-        margin-block: 2em;
+        margin-block-start: 2em;
       }
 
       footer-made-with {
@@ -79,6 +87,7 @@ export default function BeginFooter ({ html, state }) {
         }
 
         masthead-begin-logo {
+          margin-block-end: 0;
           position: relative;
           inset-block-start: 7px;
         }
@@ -127,5 +136,6 @@ export default function BeginFooter ({ html, state }) {
         <footer-made-with></footer-made-with>
       </small>
     </footer>
+    <script type="module" src="/_public/browser/footer-made-with.mjs" />
   `
 }

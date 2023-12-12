@@ -43,13 +43,19 @@ export default Masthead
 |-|-|
 | BeginFooter | begin-footer |
 | BeginLogo | masthead-begin-logo |
-| MadeWithElement | footer-made-with |
-| MadeWithBrowser | footer-made-with |
+| MadeWith | footer-made-with |
 
-**`MadeWithBrowser`** is a browser element and must be placed in your app's browser directory, i.e. `app/browser/footer-made-with.mjs`:
+**`MadeWith`** is a component and must be reexported in your app's `components` directory:
 
 ```js
-import { MadeWithBrowser } from '@begin/imprint'
-customElements.define('footer-made-with', MadeWithBrowser)
+// app/components/footer-made-with.mjs
+import { MadeWith } from '@begin/imprint'
+export default MadeWith
 ```
 
+Additionally, you'll need to import this component into a browser module:
+
+```js
+// app/browser/footer-made-with.mjs
+import MadeWith from '../components/footer-made-with.mjs'
+```
