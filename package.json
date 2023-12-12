@@ -8,7 +8,7 @@
     "lint": "eslint ./app/**/*.mjs --fix"
   },
   "dependencies": {
-    "@enhance/arc-plugin-enhance": "^9.0.0",
+    "@enhance/arc-plugin-enhance": "^9.1.5",
     "@enhance/custom-element": "^1.2.1",
     "@enhance/styles-cribsheet": "^0.0.9"
   },
