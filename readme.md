@@ -59,3 +59,43 @@ Additionally, you'll need to import this component into a browser module:
 // app/browser/footer-made-with.mjs
 import MadeWith from '../components/footer-made-with.mjs'
 ```
+
+## Custom properties
+
+The Masthead and Footer styling can be customized via the use of custom properties. Each comes with a default value baked in.
+
+### Masthead
+
+| Custom property | Application |
+|-|-|
+| `--accent` | Links and other colour accents |
+| `--inline-padding` | Inline padding on masthead contents |
+| `--muted` | Nav section headings |
+| `--max-inline-size` | Maximum width of the masthead contents |
+
+The Masthead also exposes several custom properties that can be used for layouts in your app:
+
+- `--global-bar-height`: The height of the global bar
+- `--product-bar-height`: The product bar height
+- `--masthead-max-height`: The height of the global bar + product bar
+
+### Footer
+
+| Custom property | Application |
+|-|-|
+| `--accent` | Link colour, and basis for horizontal rule |
+| `--color` | Text colour |
+| `--background-color` | Background colour |
+| `--inline-padding` | Inline padding on footer contents |
+| `--max-inline-size` | Maximum width of the footer contents |
+
+## Attributes
+
+### Masthead
+
+- `breakpoint`: Minimum width (ideally in `em`s) at which to switch from single column to multicolumn layout
+- `product`: Optional; name of the product the site is for
+- `active`: Optional; name of the global section that should show as active (usually `'products'`)
+
+### Footer
+- `breakpoint`: Minimum width (ideally in `em`s) at which to switch from single column to multicolumn layout
