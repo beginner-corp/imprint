@@ -3,14 +3,14 @@ const links = {
     ARCHITECT_URL: 'https://staging.arc.codes',
     AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://staging.begin.com',
-    DEPLOY_URL: 'https://staging.begin.com',
+    DEPLOY_URL: 'https://art-ipl.begin.app/',
     ENHANCE_URL: 'https://staging.enhance.dev',
   },
   production: {
     ARCHITECT_URL: 'https://arc.codes',
     AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://begin.com',
-    DEPLOY_URL: 'https://begin.com',
+    DEPLOY_URL: 'https://begin.com/deploy/',
     ENHANCE_URL: 'https://enhance.dev',
   }
 }
@@ -116,7 +116,7 @@ export default function BeginFooter ({ html, state }) {
         <section>
           <h2 class="font-semibold">Products</h2>
           <ul class="list-none">
-            <li><a href="${links[environment].DEPLOY_URL}">Begin Deploy</a></li>
+            <li><a href="${links[environment].DEPLOY_URL}">Deploy</a></li>
             <li><a href="${links[environment].ENHANCE_URL}">Enhance</a></li>
             <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
             <li><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></li>

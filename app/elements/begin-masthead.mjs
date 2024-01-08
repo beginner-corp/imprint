@@ -3,12 +3,14 @@ const links = {
     ARCHITECT_URL: 'https://staging.arc.codes',
     AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://staging.begin.com',
+    DEPLOY_URL: 'https://art-ipl.begin.app/',
     ENHANCE_URL: 'https://staging.enhance.dev',
   },
   production: {
     ARCHITECT_URL: 'https://arc.codes',
     AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://begin.com',
+    DEPLOY_URL: 'https://begin.com/deploy/',
     ENHANCE_URL: 'https://enhance.dev',
   }
 }
@@ -263,8 +265,8 @@ export default function BeginMasthead ({ html, state }) {
               <ul>
                 <li class="mbe">
                   <a href="${links[environment].BEGIN_URL}">
-                    <span class="semibold accent">Begin CLI</span><br />
-                    <span class='small'>Cloud distribution</span>
+                    <span class="semibold accent">Deploy</span><br />
+                    <span class='small'>Global deployment made simple</span>
                   </a>
                 </li>
                 <li class="mbe">
@@ -366,8 +368,8 @@ export default function BeginMasthead ({ html, state }) {
           <div id="widescreen-nav" class="flex justify-content-center flex-grow">
             <masthead-section-dropdown label="Products" ${active === "products" ? "active" : ""}>
               <div>
-                <h3 class="semibold"><a href="${links[environment].BEGIN_URL}">Begin CLI</a></h3>
-                <p class="small">Cloud distribution</p>
+                <h3 class="semibold"><a href="${links[environment].BEGIN_URL}">Deploy</a></h3>
+                <p class="small">Global deployment made simple</p>
               </div>
               <div>
                 <h3 class="semibold"><a href="${links[environment].ENHANCE_URL}">Enhance</a></h3>
