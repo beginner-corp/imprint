@@ -264,7 +264,7 @@ export default function BeginMasthead ({ html, state }) {
               <h2 class="semibold mbe">Products</h2>
               <ul>
                 <li class="mbe">
-                  <a href="${links[environment].BEGIN_URL}">
+                  <a href="${links[environment].DEPLOY_URL}">
                     <span class="semibold accent">Deploy</span><br />
                     <span class='small'>Global deployment made simple</span>
                   </a>
@@ -313,7 +313,7 @@ export default function BeginMasthead ({ html, state }) {
                 <article>
                   <h3 class="semibold mbe-half">Developer Docs</h3>
                   <ul>
-                    <li><a href="${links[environment].BEGIN_URL}/docs">Begin CLI</a></li>
+                    <li><a href="${links[environment].DEPLOY_URL}/docs">Deploy</a></li>
                     <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
                     <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
                     <li><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></li>
@@ -368,7 +368,7 @@ export default function BeginMasthead ({ html, state }) {
           <div id="widescreen-nav" class="flex justify-content-center flex-grow">
             <masthead-section-dropdown label="Products" ${active === "products" ? "active" : ""}>
               <div>
-                <h3 class="semibold"><a href="${links[environment].BEGIN_URL}">Deploy</a></h3>
+                <h3 class="semibold"><a href="${links[environment].DEPLOY_URL}">Deploy</a></h3>
                 <p class="small">Global deployment made simple</p>
               </div>
               <div>
@@ -397,7 +397,7 @@ export default function BeginMasthead ({ html, state }) {
               <article>
                 <h2 class="small muted semibold mbe">Developer Docs</h2>
                 <ul>
-                  <li><a href="${links[environment].BEGIN_URL}/docs">Begin CLI</a></li>
+                  <li><a href="${links[environment].DEPLOY_URL}/docs">Deploy</a></li>
                   <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
                   <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
                   <li><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></li>
