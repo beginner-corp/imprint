@@ -1,6 +1,6 @@
 {
   "name": "@begin/imprint",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "type": "module",
   "main": "index.js",
   "scripts": {
