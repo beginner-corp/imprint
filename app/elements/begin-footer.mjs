@@ -106,6 +106,7 @@ export default function BeginFooter ({ html, state }) {
           <h2 class="font-semibold">Begin</h2>
           <ul class="list-none">
             <li><a href="${links[environment].BEGIN_URL}">Home</a></li>
+            <li><a href="${links[environment].BEGIN_URL}/about">About</a></li>
             <li><a href="https://enhance.dev/showcase">Showcase</a></li>
             <li>
               <a href="${links[environment].BEGIN_URL}/blog">Blog</a> /
