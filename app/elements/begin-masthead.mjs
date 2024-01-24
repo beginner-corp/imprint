@@ -3,14 +3,14 @@ const links = {
     ARCHITECT_URL: 'https://staging.arc.codes',
     AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://staging.begin.com',
-    DEPLOY_URL: 'https://art-ipl.begin.app/',
+    DEPLOY_URL: 'https://staging.begin.com/deploy',
     ENHANCE_URL: 'https://staging.enhance.dev',
   },
   production: {
     ARCHITECT_URL: 'https://arc.codes',
     AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://begin.com',
-    DEPLOY_URL: 'https://begin.com/deploy/',
+    DEPLOY_URL: 'https://begin.com/deploy',
     ENHANCE_URL: 'https://enhance.dev',
   }
 }
@@ -313,7 +313,7 @@ export default function BeginMasthead ({ html, state }) {
                 <article>
                   <h3 class="semibold mbe-half">Developer Docs</h3>
                   <ul>
-                    <li><a href="${links[environment].DEPLOY_URL}docs">Deploy</a></li>
+                    <li><a href="${links[environment].DEPLOY_URL}/docs">Deploy</a></li>
                     <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
                     <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
                     <li><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></li>
@@ -397,7 +397,7 @@ export default function BeginMasthead ({ html, state }) {
               <article>
                 <h2 class="small muted semibold mbe">Developer Docs</h2>
                 <ul>
-                  <li><a href="${links[environment].DEPLOY_URL}docs">Deploy</a></li>
+                  <li><a href="${links[environment].DEPLOY_URL}/docs">Deploy</a></li>
                   <li><a href="${links[environment].ENHANCE_URL}/docs">Enhance</a></li>
                   <li><a href="${links[environment].ARCHITECT_URL}">Architect</a></li>
                   <li><a href="${links[environment].AWS_LITE_URL}">aws-lite</a></li>

@@ -3,7 +3,7 @@ const links = {
     ARCHITECT_URL: 'https://staging.arc.codes',
     AWS_LITE_URL: 'https://aws-lite.org',
     BEGIN_URL: 'https://staging.begin.com',
-    DEPLOY_URL: 'https://art-ipl.begin.app/',
+    DEPLOY_URL: 'https://staging.begin.com/deploy',
     ENHANCE_URL: 'https://staging.enhance.dev',
   },
   production: {
