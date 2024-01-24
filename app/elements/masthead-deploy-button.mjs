@@ -1,10 +1,10 @@
 export default function DeployButton ({ html, state}) {
   const { attrs = {} } = state
-  const { from = '' } = attrs
+  const { from = 'masthead' } = attrs
 
-  const deployUrl = from
+  const deployUrl = process.env === 'production'
     ? `https://begin.com/deploy/docs/?from=${from}`
-    : 'https://begin.com/deploy/docs/?from=masthead'
+    : `https://staging.begin.com/deploy/docs/?from=${from}`
 
   return html`
     <style>
