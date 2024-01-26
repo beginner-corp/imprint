@@ -2,7 +2,7 @@ export default function DeployButton ({ html, state}) {
   const { attrs = {} } = state
   const { from = 'masthead' } = attrs
 
-  const deployUrl = process.env === 'production'
+  const deployUrl = process.env.ARC_ENV === 'production'
     ? `https://begin.com/deploy/docs/?from=${from}`
     : `https://staging.begin.com/deploy/docs/?from=${from}`
 
