@@ -10,7 +10,7 @@ Install via the GitHub repo, preferably with a version tag:
 npm i git@github.com:beginner-corp/imprint.git#v<N.N.N>
 ```
 
-Reexport the component(s) from within your Enhance app:
+Reexport the element(s) from within your Enhance app:
 
 ```js
 // app/elements/begin-masthead.mjs
