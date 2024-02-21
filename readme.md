@@ -45,21 +45,6 @@ export default Masthead
 | BeginLogo | masthead-begin-logo |
 | MadeWith | footer-made-with |
 
-**`MadeWith`** is a component and must be reexported in your app's `components` directory:
-
-```js
-// app/components/footer-made-with.mjs
-import { MadeWith } from '@begin/imprint'
-export default MadeWith
-```
-
-Additionally, you'll need to import this component into a browser module:
-
-```js
-// app/browser/footer-made-with.mjs
-import MadeWith from '../components/footer-made-with.mjs'
-```
-
 ## Custom properties
 
 The Masthead and Footer styling can be customized via the use of custom properties. Each comes with a default value baked in.
