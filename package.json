@@ -14,7 +14,6 @@
   "devDependencies": {
     "@enhance/arc-plugin-enhance": "^9.1.5",
     "@enhance/cli": "^1.0.7",
-    "@enhance/custom-element": "^1.2.1",
     "@enhance/styles-cribsheet": "^0.0.9",
     "@enhance/types": "^0.6.1",
     "eslint": "^8.49.0"
