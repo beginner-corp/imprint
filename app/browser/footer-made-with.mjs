@@ -1,1 +1,1 @@
-import MadeWith from '../components/footer-made-with.mjs'
+/* import MadeWith from '../components/footer-made-with.mjs' */
