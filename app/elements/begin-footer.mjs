@@ -137,6 +137,5 @@ export default function BeginFooter ({ html, state }) {
         <footer-made-with></footer-made-with>
       </small>
     </footer>
-    <script type="module" src="/_public/browser/footer-made-with.mjs" />
   `
 }
